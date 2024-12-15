@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+{% block body %}
+
+<section class="h-100 bg-dark">
+    {% include 'messages.html' %}
+	<div class="container py-5 h-100">
+	  <div class="row d-flex justify-content-center align-items-center h-100">
+		<div class="col">
+		  <div class="card card-registration my-4" style="max-width: 500px; margin: auto;">
+			<div class="card-body p-md-5 text-black">
+			  <h3 class="mb-5 text-uppercase">Регистрация</h3>
+
+			  <form method="post" action="\register">
+				{% csrf_token %}
+				<div class="form-group">
+				  <label for="name">Имя</label>
+				  <input type="text" class="form-control" id="name" placeholder="Введите ваше имя" name="name">
+				</div>
+				<div class="form-group">
+				  <label for="username">Логин</label>
+				  <input type="text" class="form-control" id="username" placeholder="Введите псевдоним" name="username">
+				</div>
+				<div class="form-group">
+				  <label for="number">Номер телефона</label>
+				  <input type="num" class="form-control" id="number" placeholder="Например, 8 (999) 111-11-11" name="number">
+				</div>
+				<div class="form-group">
+				  <label for="email">Почта</label>
+				  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Введите электронный адрес" name="email">
+				  <small id="emailHelp" class="form-text text-muted">Мы никому не расскажем о вашей почте!!</small>
+				</div>
+				<div class="form-group">
+				  <label for="password">Пароль</label>
+				  <input type="password" class="form-control" id="password" placeholder="Придумайте пароль" name="password">
+				</div>
+				<div class="form-group">
+				  <label for="password2">Пароль повторно</label>
+				  <input type="password" class="form-control" id="password2" placeholder="Введите ваш пароль еще раз" name="password2">
+				</div>
+
+				<div class="d-flex justify-content-end pt-3">
+				  <button style="width: 100%;" type="submit" class="btn btn-primary btn-lg ms-2">Создать аккаунт</button>
+				</div>
+			  </form>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</section>
+
+{% endblock body %}

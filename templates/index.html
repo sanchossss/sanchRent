@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+
+
+  <div style="margin-bottom:25px ;margin-top : 25px; padding-left: 40px""><h1 class="my-3 text-left" style=" font-size:50px ; color:black" >sanchRent</h1>
+    <p style="text-align : left; margin-top : 50px; font-size : 25px ;  color : black">Добро пожаловать на sanchRent! Мы молодой сервис аренды автомобилей, представляем быстрые, удобные и безопасные машины для ваших целей.</p>
+  
+  </div>
+  <hr style="height:2px;border-width:0;color:black;background-color:black ; margin-top:35px ">
+  <h3 style="text-align:left; padding-left: 40px">Галерея машин</h3>
+  
+  <div class="row m-5" >
+  <div class="col-lg-4">
+    <div class="container" >
+      {%load static%}
+      <img src = "{%static "v1.jpg"%}" width="400" height="400" border-radius="50" class="img-thumbnail" >
+    </div>
+   
+  
+  </div><!-- /.col-lg-4 -->
+  <div class="col-lg-4">
+    <div class="container" >
+      {%load static%}
+      <img src = "{%static "car1.jpg"%}" width="400" height="400" border-radius="50" class="img-thumbnail" >
+    </div>
+    
+    
+   
+  </div><!-- /.col-lg-4 -->
+  <div class="col-lg-4">
+    <div class="container" >
+      {%load static%}
+      <img src = "{%static "car3.webp"%}" width="360" height="200" border-radius="50" class="img-thumbnail" >
+    </div>
+    
+  </div><!-- /.col-lg-4 -->
+</div>
+<div class="row m-5" >
+  <div class="col-lg-4">
+    <div class="container" >
+      {%load static%}
+      <img src = "{%static "car2.jpg"%}" width="400" height="400" border-radius="50" class="img-thumbnail" >
+    </div>
+   
+  
+  </div><!-- /.col-lg-4 -->
+  <div class="col-lg-4">
+    <div class="container" >
+      {%load static%}
+      <img src = "{%static "car5.jpg"%}" width="400" height="400" border-radius="50" class="img-thumbnail" >
+    </div>
+    
+    
+   
+  </div><!-- /.col-lg-4 -->
+  <div class="col-lg-4">
+    <div class="container" >
+      {%load static%}
+      <img src = "{%static "car4.jpg"%}" width="360" height="400" border-radius="50" class="img-thumbnail" >
+    </div>
+    
+  </div><!-- /.col-lg-4 -->
+</div>
+  
+
+{% endblock body %}
+
